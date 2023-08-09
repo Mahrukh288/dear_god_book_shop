@@ -127,41 +127,42 @@ class AppTheme {
 
   static InputDecorationTheme get _inputDecorationTheme {
     return InputDecorationTheme(
+      hoverColor: Colors.transparent,
       isDense: true,
       filled: true,
-      fillColor: Colors.grey[50],
-      labelStyle: const TextStyle(
-        fontFamily: 'SofiaPro',
-        fontWeight: FontWeight.w500,
-        fontSize: 14,
-      ),
-      suffixStyle: const TextStyle(
-        fontFamily: 'SofiaPro',
-        fontWeight: FontWeight.w500,
-        fontSize: 14,
-      ),
+      fillColor: Colors.teal.shade50,
+      // labelStyle: const TextStyle(
+      //   fontFamily: 'SofiaPro',
+      //   fontWeight: FontWeight.w500,
+      //   fontSize: 14,
+      // ),
+      // suffixStyle: const TextStyle(
+      //   fontFamily: 'SofiaPro',
+      //   fontWeight: FontWeight.w500,
+      //   fontSize: 14,
+      // ),
       hintStyle: const TextStyle(
-        fontFamily: 'SofiaPro',
-        fontWeight: FontWeight.w400,
-        fontSize: 16,
-      ),
-      prefixStyle: const TextStyle(
-        fontFamily: 'SofiaPro',
-        fontWeight: FontWeight.w500,
-        fontSize: 10,
-      ),
-      disabledBorder: OutlineInputBorder(
+          fontWeight: FontWeight.w400,
+          fontSize: 14,
+          color: Colors.black,
+          letterSpacing: 1.2),
+      //prefixStyle: const TextStyle(
+      //   fontFamily: 'SofiaPro',
+      //   fontWeight: FontWeight.w500,
+      //   fontSize: 10,
+      // ),
+      // disabledBorder: OutlineInputBorder(
+      //     borderRadius: BorderRadius.circular(10.0),
+      //     borderSide: const BorderSide(color: primaryColor)),
+      enabledBorder: UnderlineInputBorder(
           borderRadius: BorderRadius.circular(10.0),
           borderSide: const BorderSide(color: primaryColor)),
-      enabledBorder: OutlineInputBorder(
+      focusedBorder: UnderlineInputBorder(
           borderRadius: BorderRadius.circular(10.0),
-          borderSide: const BorderSide(color: primaryColor)),
-      focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10.0),
-          borderSide: const BorderSide(width: 1.5, color: Colors.green)),
-      border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10.0),
-          borderSide: const BorderSide(color: Colors.red)),
+          borderSide: const BorderSide(width: 1.5, color: Colors.red)),
+      // border: OutlineInputBorder(
+      //     borderRadius: BorderRadius.circular(10.0),
+      //     borderSide: const BorderSide(color: Colors.red)),
     );
   }
 

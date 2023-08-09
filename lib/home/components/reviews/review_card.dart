@@ -9,15 +9,52 @@ class ReviewCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: Responsive.isDesktop(context)
-          ? MediaQuery.of(context).size.width * 0.2
-          : double.infinity,
+      padding: EdgeInsets.symmetric(horizontal: 50, vertical: 30),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.grey[100],
+      ),
+      height: Responsive.isMobile(context) ? null : 400,
+      width: Responsive.isMobile(context)
+          ? MediaQuery.of(context).size.width * 0.8
+          : Responsive.isTablet(context)
+              ? MediaQuery.of(context).size.width * 0.35
+              : MediaQuery.of(context).size.width * 0.25,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Icon(
-            Icons.reviews,
-            color: primaryColor,
+          Text(
+            'Jasmine Ward, First Magazine',
+            style: Theme.of(context)
+                .textTheme
+                .bodySmall
+                ?.copyWith(color: primaryColor, fontSize: 12),
+          ),
+          SizedBox(height: 15),
+          Row(
+            children: [
+              Icon(
+                Icons.star,
+                color: Colors.yellow,
+              ),
+              Icon(
+                Icons.star,
+                color: Colors.yellow,
+              ),
+              Icon(
+                Icons.star,
+                color: Colors.yellow,
+              ),
+              Icon(
+                Icons.star,
+                color: Colors.yellow,
+              ),
+              Icon(
+                Icons.star,
+                color: Colors.yellow,
+              ),
+            ],
           ),
           // Text(
           //   '"',
@@ -29,17 +66,8 @@ class ReviewCard extends StatelessWidget {
           SizedBox(height: 15),
           Text(
             '"I am a review. Click to edit me and add text that says something nice about you and your work. Share a bit of critical acclaim and spur some excitement for your latest project."',
-            textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.bodySmall,
           ),
-          SizedBox(height: 15),
-          Text(
-            'Jasmine Ward, First Magazine',
-            style: Theme.of(context)
-                .textTheme
-                .bodySmall
-                ?.copyWith(color: primaryColor, fontSize: 12),
-          )
         ],
       ),
     );

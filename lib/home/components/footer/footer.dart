@@ -1,7 +1,9 @@
+import 'package:dear_god_book_shop/home/components/footer/mailing_list.dart';
 import 'package:flutter/material.dart';
 
 import '../../../app_theme/app_constants.dart';
 import '../../../responsive/responsive.dart';
+import 'footer_tabs.dart';
 
 class Footer extends StatelessWidget {
   const Footer({Key? key}) : super(key: key);
@@ -10,56 +12,15 @@ class Footer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding:
-          EdgeInsets.symmetric(horizontal: 20, vertical: widgetVerticalPadding),
+          EdgeInsets.symmetric(horizontal: 60, vertical: widgetVerticalPadding),
       color: Colors.teal.shade50,
       child: Column(
         // crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Flex(
-            direction:
-                Responsive.isDesktop(context) ? Axis.horizontal : Axis.vertical,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Flex(
-                direction: Responsive.isDesktop(context)
-                    ? Axis.horizontal
-                    : Axis.vertical,
-                children: [
-                  _setText(context, 'FAQ'),
-                  SizedBox(
-                    width: 20,
-                    height: 10,
-                  ),
-                  _setText(context, 'Shipping & Returns'),
-                  SizedBox(
-                    width: 20,
-                    height: 10,
-                  ),
-                  _setText(context, 'Store Policy'),
-                  SizedBox(
-                    width: 20,
-                    height: 10,
-                  ),
-                  _setText(context, 'Payment Methods'),
-                ],
-              ),
-              SizedBox(height: 20),
-              Flex(
-                direction: Responsive.isDesktop(context)
-                    ? Axis.horizontal
-                    : Axis.vertical,
-                children: [
-                  _setText(context, 'Facebook'),
-                  SizedBox(
-                    width: 20,
-                    height: 10,
-                  ),
-                  _setText(context, 'Instagram'),
-                ],
-              ),
-            ],
-          ),
-          SizedBox(height: 30),
+          MailList(),
+          SizedBox(height: 50),
+          FooterTabs(),
+          SizedBox(height: 20),
           Divider(
             color: greyColor,
             thickness: 0.3,
@@ -79,13 +40,6 @@ class Footer extends StatelessWidget {
           )
         ],
       ),
-    );
-  }
-
-  Widget _setText(BuildContext context, String text) {
-    return Text(
-      text,
-      style: Theme.of(context).textTheme.bodySmall?.copyWith(fontSize: 12),
     );
   }
 }

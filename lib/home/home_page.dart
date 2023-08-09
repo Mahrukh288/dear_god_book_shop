@@ -1,5 +1,6 @@
 import 'package:dear_god_book_shop/app_drawer.dart';
 import 'package:dear_god_book_shop/home/components/app_head.dart';
+import 'package:dear_god_book_shop/home/components/main_body/main_body.dart';
 import 'package:dear_god_book_shop/home/components/tabs.dart';
 import 'package:flutter/material.dart';
 
@@ -32,6 +33,7 @@ class HomePage extends StatelessWidget {
                 AppTabBar(),
                 Divider(color: primaryColor, thickness: 0.3),
               ],
+              MainBody(),
               Reviews(),
               Footer(),
             ],
