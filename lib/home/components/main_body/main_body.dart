@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../responsive/responsive.dart';
 import 'product_card.dart';
 
 class MainBody extends StatelessWidget {
@@ -29,30 +30,40 @@ class MainBody extends StatelessWidget {
                 ),
               ),
               Positioned(
-                bottom: 500,
-                left: MediaQuery.of(context).size.width * 0.15,
+                bottom: Responsive.isDesktop(context) ? 600 : 600,
+                left: 0,
                 child: Row(
                   children: [
                     ProductCard(),
-                    SizedBox(width: 40),
+                    SizedBox(width: 10),
                     ProductCard(),
+                    if (Responsive.isDesktop(context)) ...[
+                      SizedBox(width: 10),
+                      ProductCard(),
+                    ]
                   ],
                 ),
               ),
               Positioned(
-                top: 600,
-                left: MediaQuery.of(context).size.width * 0.15,
+                top: 550,
+                right: !Responsive.isMobile(context)
+                    ? 0
+                    : MediaQuery.of(context).size.width * 0.15,
+                //left: MediaQuery.of(context).size.width * 0.15,
                 child: Container(
                   padding: EdgeInsets.all(30),
-                  color: Colors.green[200],
-                  height: 400,
+                  decoration: BoxDecoration(
+                    color: Colors.green[200],
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  height: 450,
                   width: MediaQuery.of(context).size.width * 0.5 + 40,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    // crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         'Idea Behind Dear God',
+                        textAlign: TextAlign.center,
                         style: Theme.of(context)
                             .textTheme
                             .headlineLarge

@@ -8,7 +8,7 @@ class AppTabBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 20.0),
+      padding: const EdgeInsets.symmetric(vertical: 10.0),
       child: Wrap(
         runSpacing: 5,
         spacing: 50,
@@ -35,11 +35,9 @@ class AppTabBar extends StatelessWidget {
   }
 
   Widget _setText(BuildContext context, String text) {
-    return Expanded(
-      child: Text(
-        text,
-        style: Theme.of(context).textTheme.bodySmall,
-      ),
+    return Text(
+      text,
+      style: Theme.of(context).textTheme.bodySmall,
     );
   }
 }

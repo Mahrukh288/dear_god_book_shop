@@ -1,19 +1,29 @@
 import 'package:dear_god_book_shop/app_theme/app_constants.dart';
 import 'package:flutter/material.dart';
 
+import '../../../responsive/responsive.dart';
+
 class ProductCard extends StatelessWidget {
   const ProductCard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10),
+      ),
       padding: EdgeInsets.symmetric(vertical: 20),
-      width: MediaQuery.of(context).size.width * 0.25,
-      height: 500,
+      width: Responsive.isDesktop(context)
+          ? MediaQuery.of(context).size.width * 0.2
+          : Responsive.isTablet(context)
+              ? MediaQuery.of(context).size.width * 0.3
+              : MediaQuery.of(context).size.width * 0.45,
+      height: Responsive.isDesktop(context) ? 400 : 400,
       child: Column(
         children: [
           Text(
-            'Best Selling',
+            '- - Best Selling - -',
             style: Theme.of(context)
                 .textTheme
                 .displaySmall
@@ -23,7 +33,7 @@ class ProductCard extends StatelessWidget {
           Expanded(
             child: Image.asset(
               'images/product1.jpg',
-              fit: BoxFit.fitWidth,
+              fit: BoxFit.cover,
               width: double.infinity,
             ),
           ),
