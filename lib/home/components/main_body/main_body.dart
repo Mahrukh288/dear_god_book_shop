@@ -10,9 +10,6 @@ class MainBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(
-          height: 30,
-        ),
         Text('Our Best Selling',
             style: Theme.of(context).textTheme.headlineLarge),
         SizedBox(height: 40),
@@ -31,7 +28,7 @@ class MainBody extends StatelessWidget {
               ),
               Positioned(
                 bottom: Responsive.isDesktop(context) ? 600 : 600,
-                left: 0,
+                left: !Responsive.isMobile(context) ? 30 : 0,
                 child: Row(
                   children: [
                     ProductCard(),
@@ -47,7 +44,7 @@ class MainBody extends StatelessWidget {
               Positioned(
                 top: 550,
                 right: !Responsive.isMobile(context)
-                    ? 0
+                    ? 30
                     : MediaQuery.of(context).size.width * 0.15,
                 //left: MediaQuery.of(context).size.width * 0.15,
                 child: Container(
@@ -73,21 +70,13 @@ class MainBody extends StatelessWidget {
                         height: 20,
                       ),
                       Text(
-                        'Dear God is a safe space to those introverts who feel a lot but when it comes to say, they do not find enough words. Because no one seems to understand.',
+                        'Dear God is a safe space to those who love to write to God, even though they know He already knows everything.',
                         textAlign: TextAlign.center,
                         style: Theme.of(context)
                             .textTheme
                             .bodySmall
                             ?.copyWith(color: Colors.white, fontSize: 20),
                       ),
-                      Text(
-                        'So they love to write to God, even though they know He already knows everything. ',
-                        textAlign: TextAlign.center,
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodySmall
-                            ?.copyWith(color: Colors.white, fontSize: 20),
-                      )
                     ],
                   ),
                 ),

@@ -1,16 +1,15 @@
-import 'package:dear_god_book_shop/app_drawer.dart';
+import 'package:dear_god_book_shop/contact_us/contact_us_tile.dart';
 import 'package:flutter/material.dart';
 
+import '../app_drawer.dart';
 import '../app_theme/app_constants.dart';
+import '../home/components/app_head.dart';
+import '../home/components/footer/footer.dart';
+import '../home/components/tabs.dart';
 import '../responsive/responsive.dart';
-import 'components/app_head.dart';
-import 'components/footer/footer.dart';
-import 'components/main_body/main_body.dart';
-import 'components/reviews/reviews.dart';
-import 'components/tabs.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class ContactUs extends StatelessWidget {
+  const ContactUs({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,11 +19,10 @@ class HomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.symmetric(
-                horizontal: Responsive.isMobile(context)
-                    ? screenSize * 5
-                    : screenSize * 10,
-              ) +
-              EdgeInsets.only(top: appVerticalPadding),
+              horizontal: Responsive.isMobile(context)
+                  ? screenSize * 5
+                  : screenSize * 10,
+              vertical: appVerticalPadding),
           child: Column(
             children: [
               AppHead(),
@@ -35,11 +33,7 @@ class HomePage extends StatelessWidget {
               SizedBox(
                 height: 30,
               ),
-              MainBody(),
-              SizedBox(
-                height: 30,
-              ),
-              Reviews(),
+              ContactUsTile(),
               SizedBox(
                 height: 30,
               ),

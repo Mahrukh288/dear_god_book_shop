@@ -35,6 +35,8 @@ class AppHead extends StatelessWidget {
               .displaySmall
               ?.copyWith(color: primaryColor),
         ),
+        SizedBox(height: 20),
+        Divider(color: primaryColor, thickness: 0.3),
       ],
     );
   }
