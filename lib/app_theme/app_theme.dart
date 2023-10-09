@@ -7,9 +7,10 @@ class AppTheme {
 
   ThemeData get lightTheme {
     return _getBaseTheme.copyWith(
-        textTheme: _textThemeData,
-        elevatedButtonTheme: _elevatedButtonThemeData,
-        inputDecorationTheme: _inputDecorationTheme);
+      textTheme: _textThemeData,
+      elevatedButtonTheme: _elevatedButtonThemeData,
+      // inputDecorationTheme: _inputDecorationTheme
+    );
   }
 
   TextTheme get _textThemeData {
@@ -75,7 +76,12 @@ class AppTheme {
   TextStyle? get _bodySmall {
     final baseStyle = _getBaseTheme.textTheme.bodySmall;
     return baseStyle?.copyWith(
-        fontSize: 15, color: blackColor, letterSpacing: 1.2);
+        color: textColor,
+        fontWeight: FontWeight.w400,
+        fontSize: 14,
+        height: 1.5,
+        //letterSpacing: 1.2,
+        fontFamily: 'Poppins');
   }
 
   TextStyle? get _bodyMedium {
@@ -86,9 +92,12 @@ class AppTheme {
   TextStyle? get _bodyLarge {
     final baseStyle = _getBaseTheme.textTheme.bodyLarge;
     return baseStyle?.copyWith(
-      fontFamily: 'FranklinGothicRegular',
-      color: primaryColor,
-    );
+        color: textColor,
+        fontWeight: FontWeight.w600,
+        fontSize: 20,
+        height: 1.5,
+        //letterSpacing: 1.2,
+        fontFamily: 'Poppins');
   }
 
   TextStyle? get _headlineSmall {
@@ -125,46 +134,46 @@ class AppTheme {
     return baseStyle?.copyWith();
   }
 
-  static InputDecorationTheme get _inputDecorationTheme {
-    return InputDecorationTheme(
-      hoverColor: Colors.transparent,
-      isDense: true,
-      filled: true,
-      fillColor: Colors.teal.shade50,
-      // labelStyle: const TextStyle(
-      //   fontFamily: 'SofiaPro',
-      //   fontWeight: FontWeight.w500,
-      //   fontSize: 14,
-      // ),
-      // suffixStyle: const TextStyle(
-      //   fontFamily: 'SofiaPro',
-      //   fontWeight: FontWeight.w500,
-      //   fontSize: 14,
-      // ),
-      hintStyle: const TextStyle(
-          fontWeight: FontWeight.w400,
-          fontSize: 14,
-          color: Colors.black,
-          letterSpacing: 1.2),
-      //prefixStyle: const TextStyle(
-      //   fontFamily: 'SofiaPro',
-      //   fontWeight: FontWeight.w500,
-      //   fontSize: 10,
-      // ),
-      // disabledBorder: OutlineInputBorder(
-      //     borderRadius: BorderRadius.circular(10.0),
-      //     borderSide: const BorderSide(color: primaryColor)),
-      enabledBorder: UnderlineInputBorder(
-          borderRadius: BorderRadius.circular(10.0),
-          borderSide: const BorderSide(color: primaryColor)),
-      focusedBorder: UnderlineInputBorder(
-          borderRadius: BorderRadius.circular(10.0),
-          borderSide: const BorderSide(width: 1.5, color: Colors.red)),
-      // border: OutlineInputBorder(
-      //     borderRadius: BorderRadius.circular(10.0),
-      //     borderSide: const BorderSide(color: Colors.red)),
-    );
-  }
+  // static InputDecorationTheme get _inputDecorationTheme {
+  //   return InputDecorationTheme(
+  //     hoverColor: Colors.transparent,
+  //     isDense: true,
+  //     filled: true,
+  //     //fillColor: Colors.teal.shade50,
+  //     // labelStyle: const TextStyle(
+  //     //   fontFamily: 'SofiaPro',
+  //     //   fontWeight: FontWeight.w500,
+  //     //   fontSize: 14,
+  //     // ),
+  //     // suffixStyle: const TextStyle(
+  //     //   fontFamily: 'SofiaPro',
+  //     //   fontWeight: FontWeight.w500,
+  //     //   fontSize: 14,
+  //     // ),
+  //     hintStyle: const TextStyle(
+  //         fontWeight: FontWeight.w400,
+  //         fontSize: 14,
+  //         color: Colors.black,
+  //         letterSpacing: 1.2),
+  //     //prefixStyle: const TextStyle(
+  //     //   fontFamily: 'SofiaPro',
+  //     //   fontWeight: FontWeight.w500,
+  //     //   fontSize: 10,
+  //     // ),
+  //     // disabledBorder: OutlineInputBorder(
+  //     //     borderRadius: BorderRadius.circular(10.0),
+  //     //     borderSide: const BorderSide(color: primaryColor)),
+  //     // enabledBorder: UnderlineInputBorder(
+  //     //     borderRadius: BorderRadius.circular(10.0),
+  //     //     borderSide: const BorderSide(color: primaryColor)),
+  //     // focusedBorder: UnderlineInputBorder(
+  //     //     borderRadius: BorderRadius.circular(10.0),
+  //     //     borderSide: const BorderSide(width: 1.5, color: Colors.red)),
+  //     // border: OutlineInputBorder(
+  //     //     borderRadius: BorderRadius.circular(10.0),
+  //     //     borderSide: const BorderSide(color: Colors.red)),
+  //   );
+  // }
 
   ElevatedButtonThemeData get _elevatedButtonThemeData {
     return ElevatedButtonThemeData(

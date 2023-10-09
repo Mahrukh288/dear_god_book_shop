@@ -1,8 +1,9 @@
 import 'package:dear_god_book_shop/app_drawer.dart';
 import 'package:flutter/material.dart';
 
-import '../app_theme/app_constants.dart';
-import '../responsive/responsive.dart';
+
+import '../../app_theme/app_constants.dart';
+import '../../responsive/responsive.dart';
 import 'components/app_head.dart';
 import 'components/footer/footer.dart';
 import 'components/main_body/main_body.dart';

@@ -1,7 +1,8 @@
 import 'package:dear_god_book_shop/app_theme/app_constants.dart';
 import 'package:flutter/material.dart';
 
-import '../../responsive/responsive.dart';
+import '../../../responsive/responsive.dart';
+
 
 class AppHead extends StatelessWidget {
   const AppHead({Key? key}) : super(key: key);
