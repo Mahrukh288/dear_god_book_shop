@@ -7,21 +7,24 @@ class ViewJobDetailsHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Image.asset('images/menu_p.png'),
-            const BackButton(
-              color: primaryColor,
-            )
-          ],
-        ),
-        const Divider(
-          color: primaryColor,
-        ),
-      ],
+    return Padding(
+      padding: EdgeInsets.only(left: 16, top: 30, right: 16),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Image.asset('images/menu_p.png'),
+              const BackButton(
+                color: primaryColor,
+              )
+            ],
+          ),
+          const Divider(
+            color: primaryColor,
+          ),
+        ],
+      ),
     );
   }
 }

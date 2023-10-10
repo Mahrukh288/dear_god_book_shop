@@ -11,26 +11,26 @@ class ApplyForJob extends StatelessWidget {
       children: [
         Container(
           //height: 48, width: 48,
-          padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(10)),
+            borderRadius: const BorderRadius.all(Radius.circular(10)),
             border: Border.all(color: primaryColor),
           ),
-          child: Icon(
+          child: const Icon(
             Icons.bookmark,
             color: primaryColor,
             size: 30,
           ),
         ),
-        SizedBox(
-          width: 30,
+        const SizedBox(
+          width: 20,
         ),
         Expanded(
           child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
-                  padding: EdgeInsets.symmetric(vertical: 20)),
+                  padding: const EdgeInsets.symmetric(vertical: 13)),
               onPressed: () {},
               child: Text(
                 'Apply for Job',

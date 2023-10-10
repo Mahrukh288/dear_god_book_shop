@@ -9,14 +9,15 @@ class AppFoot extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 75,
+      height: 65,
       decoration: const BoxDecoration(
-          color: secondaryColor,
-          borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(20),
-              bottomRight: Radius.circular(20))),
+        color: secondaryColor,
+        // borderRadius: BorderRadius.only(
+        //     bottomLeft: Radius.circular(20),
+        //     bottomRight: Radius.circular(20))
+      ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 6),
+        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 2),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

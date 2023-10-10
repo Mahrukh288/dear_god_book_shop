@@ -16,9 +16,10 @@ class JobTile extends StatelessWidget {
         );
       },
       child: Container(
-        height: 100,
+        height: 110,
         width: double.infinity,
         padding: EdgeInsets.symmetric(horizontal: 6, vertical: 8),
+        margin: EdgeInsets.only(bottom: 10),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -41,9 +42,15 @@ class JobTile extends StatelessWidget {
                 Container(
                   height: 48,
                   width: 48,
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
-                      color: Colors.amber),
+                      color: myJob.id == 1
+                          ? Colors.amber
+                          : myJob.id == 2
+                              ? Colors.blue
+                              : myJob.id == 3
+                                  ? Colors.pink[200]
+                                  : Colors.greenAccent),
                 ),
                 SizedBox(width: 10),
                 Column(
@@ -87,8 +94,8 @@ class JobTile extends StatelessWidget {
             Column(
               children: [
                 Icon(
-                  Icons.bookmark,
-                  color: myJob.status ? primaryColor : null,
+                  myJob.status ? Icons.bookmark : Icons.bookmark_outline,
+                  color: primaryColor,
                   size: 30,
                 ),
                 SizedBox(

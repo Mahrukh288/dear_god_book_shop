@@ -9,18 +9,24 @@ import '../home/componants/app_foot.dart';
 class FilterJob extends StatelessWidget {
   const FilterJob({Key? key}) : super(key: key);
 
-  static final List<JobDetails> myJobs = [JobDetails()];
+  static final List<JobDetails> myJobs = [
+    JobDetails(id: 1, jobTitle: 'Software Engineer'),
+    JobDetails(id: 2, jobTitle: 'Frontend Developer'),
+    JobDetails(id: 3, jobTitle: 'Software Engineer'),
+    JobDetails(id: 4, jobTitle: 'Software Engineer'),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
-            borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(20),
-                topRight: Radius.circular(20),
-                bottomLeft: Radius.circular(40),
-                bottomRight: Radius.circular(40)),
+            // borderRadius: BorderRadius.only(
+            //     topLeft: Radius.circular(20),
+            //     topRight: Radius.circular(20),
+            //     bottomLeft: Radius.circular(40),
+            //     bottomRight: Radius.circular(40)
+            // ),
             color: primaryColor),
         child: Column(
           //mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -28,7 +34,8 @@ class FilterJob extends StatelessWidget {
             const FilterHead(),
             Expanded(
               child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
                 decoration: const BoxDecoration(
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(20),
@@ -38,13 +45,22 @@ class FilterJob extends StatelessWidget {
                 child: Column(
                   children: [
                     JobTile(
-                      myJob: JobDetails(),
+                      myJob: myJobs[0],
+                    ),
+                    JobTile(
+                      myJob: myJobs[1],
+                    ),
+                    JobTile(
+                      myJob: myJobs[2],
+                    ),
+                    JobTile(
+                      myJob: myJobs[3],
                     )
                   ],
                 ),
               ),
             ),
-            AppFoot(),
+            const AppFoot(),
           ],
         ),
       ),

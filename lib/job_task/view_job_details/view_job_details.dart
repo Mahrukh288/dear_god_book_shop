@@ -11,7 +11,7 @@ class ViewJobDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+        //padding: EdgeInsets.symmetric(horizontal: 16, vertical: 6),
         decoration: const BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(20)),
             color: Colors.white),

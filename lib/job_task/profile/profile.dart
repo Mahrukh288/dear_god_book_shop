@@ -15,13 +15,13 @@ class Profile extends StatelessWidget {
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(30),
+            //borderRadius: BorderRadius.circular(30),
             gradient: const LinearGradient(colors: [
-              primaryColor,
-              secondaryColor,
-            ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
+          primaryColor,
+          secondaryColor,
+        ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
         child: const Padding(
-          padding: EdgeInsets.symmetric(vertical: 35, horizontal: 30),
+          padding: EdgeInsets.symmetric(vertical: 30, horizontal: 16),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

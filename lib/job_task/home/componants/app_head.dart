@@ -10,13 +10,13 @@ class AppHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10),
+      padding: const EdgeInsets.only(left: 16.0, top: 30, right: 16),
       height: 250,
       decoration: const BoxDecoration(
         color: primaryColor,
         borderRadius: BorderRadius.only(
-            topRight: Radius.circular(20),
-            topLeft: Radius.circular(20),
+            // topRight: Radius.circular(20),
+            // topLeft: Radius.circular(20),
             bottomLeft: Radius.circular(40),
             bottomRight: Radius.circular(40)),
       ),

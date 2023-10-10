@@ -22,7 +22,7 @@ class _DescriptionSwitchState extends State<DescriptionSwitch> {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 60,
+      height: 50,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(15)),
         border: Border.all(color: primaryColor),
@@ -38,8 +38,7 @@ class _DescriptionSwitchState extends State<DescriptionSwitch> {
               },
               child: Container(
                 alignment: Alignment.center,
-                //width: double.infinity / 2,
-                height: 60,
+                height: double.infinity,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(15)),
                     //border: Border.all(color: primaryColor),
@@ -62,8 +61,7 @@ class _DescriptionSwitchState extends State<DescriptionSwitch> {
               },
               child: Container(
                 alignment: Alignment.center,
-                //width: double.infinity / 2,
-                height: 60,
+                height: double.infinity,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(15)),
                     //border: Border.all(color: primaryColor),
