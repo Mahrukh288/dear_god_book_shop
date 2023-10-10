@@ -10,6 +10,7 @@ class AppHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10),
       height: 250,
       decoration: const BoxDecoration(
         color: primaryColor,
@@ -19,22 +20,19 @@ class AppHeader extends StatelessWidget {
             bottomLeft: Radius.circular(40),
             bottomRight: Radius.circular(40)),
       ),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Image.asset('images/Menu.png'),
-            const SizedBox(
-              height: 10,
-            ),
-            const Display(),
-            const SizedBox(
-              height: 10,
-            ),
-            const JobSearch()
-          ],
-        ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Image.asset('images/Menu.png'),
+          const SizedBox(
+            height: 10,
+          ),
+          const Display(),
+          const SizedBox(
+            height: 10,
+          ),
+          const JobSearch()
+        ],
       ),
     );
   }
