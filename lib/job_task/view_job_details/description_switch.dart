@@ -24,7 +24,7 @@ class _DescriptionSwitchState extends State<DescriptionSwitch> {
       width: double.infinity,
       height: 50,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(15)),
+        borderRadius: const BorderRadius.all(Radius.circular(15)),
         border: Border.all(color: primaryColor),
       ),
       child: Row(
@@ -40,7 +40,7 @@ class _DescriptionSwitchState extends State<DescriptionSwitch> {
                 alignment: Alignment.center,
                 height: double.infinity,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(15)),
+                    borderRadius: const BorderRadius.all(Radius.circular(15)),
                     //border: Border.all(color: primaryColor),
                     color: !isDes ? Colors.white : primaryColor),
                 child: Text(
@@ -63,7 +63,7 @@ class _DescriptionSwitchState extends State<DescriptionSwitch> {
                 alignment: Alignment.center,
                 height: double.infinity,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(15)),
+                    borderRadius: const BorderRadius.all(Radius.circular(15)),
                     //border: Border.all(color: primaryColor),
                     color: isDes ? Colors.white : primaryColor),
                 child: Text(

@@ -14,9 +14,9 @@ class Profile extends StatelessWidget {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             //borderRadius: BorderRadius.circular(30),
-            gradient: const LinearGradient(colors: [
+            gradient: LinearGradient(colors: [
           primaryColor,
           secondaryColor,
         ], begin: Alignment.topLeft, end: Alignment.bottomRight)),

@@ -24,7 +24,7 @@ class AppSearchBar extends StatelessWidget {
                   color: primaryColor,
                   size: 30,
                 )),
-            SizedBox(
+            const SizedBox(
               width: 5,
             ),
             Expanded(
@@ -33,7 +33,7 @@ class AppSearchBar extends StatelessWidget {
                     .textTheme
                     .bodySmall
                     ?.copyWith(color: Colors.grey, fontWeight: FontWeight.w600),
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                     hintText: 'Search Job', border: InputBorder.none),
               ),
             )

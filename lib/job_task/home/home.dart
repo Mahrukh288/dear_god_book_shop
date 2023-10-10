@@ -20,7 +20,7 @@ class Home extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            AppHeader(),
+            const AppHeader(),
             ElevatedButton(
                 onPressed: () {
                   Navigator.push(
@@ -29,7 +29,7 @@ class Home extends StatelessWidget {
                   );
                 },
                 child: const Text('Show Results')),
-            AppFoot(),
+            const AppFoot(),
           ],
         ),
       ),

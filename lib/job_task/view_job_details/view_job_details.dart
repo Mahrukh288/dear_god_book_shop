@@ -15,7 +15,7 @@ class ViewJobDetails extends StatelessWidget {
         decoration: const BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(20)),
             color: Colors.white),
-        child: Column(children: [
+        child: const Column(children: [
           ViewJobDetailsHeader(),
           Expanded(child: JobDetails()),
           AppFoot(),

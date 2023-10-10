@@ -18,17 +18,17 @@ class JobTile extends StatelessWidget {
       child: Container(
         height: 110,
         width: double.infinity,
-        padding: EdgeInsets.symmetric(horizontal: 6, vertical: 8),
-        margin: EdgeInsets.only(bottom: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 8),
+        margin: const EdgeInsets.only(bottom: 10),
         decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.all(Radius.circular(10)),
+          borderRadius: const BorderRadius.all(Radius.circular(10)),
           boxShadow: [
             BoxShadow(
               color: Colors.grey.withOpacity(0.5),
               spreadRadius: 5,
               blurRadius: 7,
-              offset: Offset(0, 3), // changes position of shadow
+              offset: const Offset(0, 3), // changes position of shadow
             ),
           ],
         ),
@@ -43,7 +43,7 @@ class JobTile extends StatelessWidget {
                   height: 48,
                   width: 48,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(5)),
+                      borderRadius: const BorderRadius.all(Radius.circular(5)),
                       color: myJob.id == 1
                           ? Colors.amber
                           : myJob.id == 2
@@ -52,7 +52,7 @@ class JobTile extends StatelessWidget {
                                   ? Colors.pink[200]
                                   : Colors.greenAccent),
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -63,7 +63,7 @@ class JobTile extends StatelessWidget {
                           .bodyLarge
                           ?.copyWith(color: primaryColor),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 8,
                     ),
                     Text(
@@ -73,13 +73,14 @@ class JobTile extends StatelessWidget {
                           .bodySmall
                           ?.copyWith(color: primaryColor),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
                     Container(
-                      padding: EdgeInsets.symmetric(horizontal: 5, vertical: 1),
+                      padding: const EdgeInsets.symmetric(horizontal: 5),
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(5)),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(5)),
                           color: Colors.grey[200]),
                       child: Text(
                         myJob.jobType,
@@ -98,7 +99,7 @@ class JobTile extends StatelessWidget {
                   color: primaryColor,
                   size: 30,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
                 Text(
@@ -108,7 +109,7 @@ class JobTile extends StatelessWidget {
                       .bodySmall
                       ?.copyWith(color: primaryColor),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
                 Text(

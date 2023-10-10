@@ -18,7 +18,7 @@ class ProfileFoot extends StatelessWidget {
                   Icons.logout,
                   color: primaryColor,
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 Text(
                   'Logout',
                   style: Theme.of(context).textTheme.bodySmall?.copyWith(

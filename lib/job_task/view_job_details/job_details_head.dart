@@ -17,7 +17,7 @@ class JobDetailsHead extends StatelessWidget {
                 borderRadius: BorderRadius.all(Radius.circular(5)),
                 color: Colors.amber),
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
           Text(
@@ -27,7 +27,7 @@ class JobDetailsHead extends StatelessWidget {
                 .bodySmall
                 ?.copyWith(color: primaryColor),
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
           Text(
@@ -37,7 +37,7 @@ class JobDetailsHead extends StatelessWidget {
                 .bodyLarge
                 ?.copyWith(color: primaryColor),
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
           Text(
@@ -47,7 +47,7 @@ class JobDetailsHead extends StatelessWidget {
                 .bodySmall
                 ?.copyWith(color: primaryColor),
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
           Wrap(
@@ -55,9 +55,10 @@ class JobDetailsHead extends StatelessWidget {
             spacing: 10,
             children: [
               Container(
-                padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(5)),
+                  borderRadius: const BorderRadius.all(Radius.circular(5)),
                   border: Border.all(color: primaryColor),
                 ),
                 child: Text(
@@ -67,9 +68,10 @@ class JobDetailsHead extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(5)),
+                  borderRadius: const BorderRadius.all(Radius.circular(5)),
                   border: Border.all(color: primaryColor),
                 ),
                 child: Text(
@@ -79,9 +81,10 @@ class JobDetailsHead extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(5)),
+                  borderRadius: const BorderRadius.all(Radius.circular(5)),
                   border: Border.all(color: primaryColor),
                 ),
                 child: Text(
@@ -92,7 +95,7 @@ class JobDetailsHead extends StatelessWidget {
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
           Wrap(

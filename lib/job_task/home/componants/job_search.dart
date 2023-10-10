@@ -7,10 +7,10 @@ class JobSearch extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       children: [
         AppSearchBar(),
-        const SizedBox(
+        SizedBox(
           width: 20,
         ),
         SearchMenu()

@@ -8,7 +8,7 @@ class FilterHead extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: 16, top: 30, right: 16, bottom: 10),
+      padding: const EdgeInsets.only(left: 16, top: 30, right: 16, bottom: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -16,10 +16,10 @@ class FilterHead extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Image.asset('images/Menu.png'),
-              BackButton(color: textColor),
+              const BackButton(color: textColor),
             ],
           ),
-          Divider(color: textColor),
+          const Divider(color: textColor),
           Text(
             'Filtered Jobs',
             style: Theme.of(context).textTheme.bodyLarge,
