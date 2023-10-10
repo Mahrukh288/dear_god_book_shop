@@ -10,7 +10,7 @@ class AppHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
+      height: 250,
       decoration: const BoxDecoration(
         color: primaryColor,
         borderRadius: BorderRadius.only(
@@ -24,7 +24,7 @@ class AppHeader extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.asset('images/menu.png'),
+            Image.asset('images/Menu.png'),
             const SizedBox(
               height: 10,
             ),

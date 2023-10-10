@@ -29,7 +29,7 @@ class Profile extends StatelessWidget {
               Column(
                 children: [
                   ProfileHead(),
-                  SizedBox(height: 50),
+                  SizedBox(height: 30),
                   ProfileTile(),
                 ],
               ),

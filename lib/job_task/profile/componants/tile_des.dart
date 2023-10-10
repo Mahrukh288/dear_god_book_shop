@@ -19,12 +19,12 @@ class TileDes extends StatelessWidget {
           Icon(
             icon,
             color: Colors.white,
-            size: 30,
+            size: isHome ? 25 : 30,
           ),
           const SizedBox(width: 20),
           Text(text,
               style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                  fontSize: isHome ? 16 : 20,
+                  fontSize: isHome ? 12 : 16,
                   fontWeight: isHome ? FontWeight.w400 : FontWeight.w600))
         ],
       ),

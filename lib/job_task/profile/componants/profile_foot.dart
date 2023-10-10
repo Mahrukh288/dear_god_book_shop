@@ -18,13 +18,11 @@ class ProfileFoot extends StatelessWidget {
                   Icons.logout,
                   color: primaryColor,
                 ),
-                SizedBox(width: 15),
+                SizedBox(width: 10),
                 Text(
                   'Logout',
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodyLarge
-                      ?.copyWith(color: primaryColor),
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                      color: primaryColor, fontWeight: FontWeight.w600),
                 )
               ],
             )),
@@ -32,8 +30,8 @@ class ProfileFoot extends StatelessWidget {
           'App Version - V2.10',
           style: Theme.of(context)
               .textTheme
-              .bodyLarge
-              ?.copyWith(color: primaryColor),
+              .bodySmall
+              ?.copyWith(color: primaryColor, fontWeight: FontWeight.w600),
         )
       ],
     );

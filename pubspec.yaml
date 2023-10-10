@@ -52,10 +52,7 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-  fonts:
-    - family: Satisfy
-      fonts:
-        - asset: app_fonts/Satisfy-Regular.ttf
+
 
   assets:
     - images/

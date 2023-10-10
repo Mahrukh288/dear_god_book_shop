@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: AppTheme().lightTheme,
       home: const Scaffold(
         backgroundColor: Colors.black,
-        body: Home(),
+        body: SafeArea(child: Home()),
         bottomNavigationBar: AppFoot(),
       ),
     );

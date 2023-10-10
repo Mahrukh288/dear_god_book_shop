@@ -94,7 +94,7 @@ class AppTheme {
     return baseStyle?.copyWith(
         color: textColor,
         fontWeight: FontWeight.w600,
-        fontSize: 20,
+        fontSize: 16,
         height: 1.5,
         //letterSpacing: 1.2,
         fontFamily: 'Poppins');
