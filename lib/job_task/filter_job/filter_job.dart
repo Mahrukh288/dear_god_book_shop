@@ -1,11 +1,10 @@
+import 'package:dear_god_book_shop/job_task/filter_job/filter_head.dart';
 import 'package:flutter/material.dart';
 
-import '../filter_job/filter_job.dart';
-import 'componants/app_foot.dart';
-import 'componants/app_head.dart';
+import '../home/componants/app_foot.dart';
 
-class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+class FilterJob extends StatelessWidget {
+  const FilterJob({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,15 +19,7 @@ class Home extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            AppHeader(),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const FilterJob()),
-                  );
-                },
-                child: const Text('Show Results')),
+            FilterHead(),
             AppFoot(),
           ],
         ),
